@@ -25,24 +25,6 @@
         android:id="@+id/hirername"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:id="@+id/listView"
-        android:layout_marginTop="91dp"
-        android:layout_below="@+id/hirername"
-        android:layout_alignParentStart="true" />
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/jobquery"
-        android:entries="@array/job"
-        android:prompt="@string/job_prompt"
-        android:layout_below="@+id/listView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="79dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,6 +34,53 @@
         android:layout_below="@+id/hirername"
         android:layout_alignParentStart="true"
         android:layout_marginTop="43dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button01"
+        android:layout_below="@id/textView5"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button02"
+        android:layout_below="@id/button01"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button03"
+        android:layout_below="@id/button02"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button04"
+        android:layout_below="@id/button03"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button05"
+        android:layout_below="@id/button04"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jobquery"
+        android:entries="@array/job"
+        android:prompt="@string/job_prompt"
+        android:layout_below="@+id/button05"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="79dp" />
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,13 +92,6 @@
         android:layout_marginBottom="60dp"
         android:layout_alignParentStart="true" />
 
-    <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/datePicker"
-        android:layout_below="@+id/jobquery"
-        android:layout_alignParentStart="true" />
-
 
     <Button
         android:layout_width="wrap_content"
@@ -78,6 +100,14 @@
         android:id="@+id/askforjob"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:background="#a63f51b5" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"
+        android:layout_below="@+id/jobquery"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

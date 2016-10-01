@@ -166,9 +166,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.execSQL(query);
     }
 
-    public void insert_record_job(String Hid, String Wid, String date) {
+    public void insert_record_job(String Hid, String Wid, String date, String Workern, String Jobdes) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "INSERT into 'jobs' (Hid, Wid, Date, Status) VALUES('";
+        String query = "INSERT into 'jobs' (Hid, Wid, Date, Status, WorkerN, JobDes) VALUES('";
         query += Hid;
         query += "', '";
         query += Wid;
@@ -176,6 +176,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         query += date;
         query += "', '";
         query += "0";
+        query += "', '";
+        query += Workern;
+        query += "', '";
+        query += Jobdes;
         query += "')";
         db.execSQL(query);
     }
@@ -224,5 +228,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         c = db.query("jobs", null, "Hid=?", args, null, null, null);
         c.moveToFirst();
         return c;
+    }
+
+    public void job_finish(String jobID) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "UPDATE jobs SET Status=1 WHERE Jobid=";
+        query += jobID;
+        query += ";";
+        db.execSQL(query);
     }
 }

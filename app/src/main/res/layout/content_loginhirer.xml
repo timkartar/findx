@@ -16,7 +16,7 @@
         android:id="@+id/userlh"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Userame"
+        android:hint="Username"
         android:inputType="text"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -32,20 +32,22 @@
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="submit"
         android:id="@+id/loginhsubmit"
-        android:layout_below="@+id/userlh"
-        android:layout_alignStart="@+id/buttonhirerli"
-        android:layout_marginTop="117dp" />
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/passlh"
+        android:layout_centerHorizontal="true"
+        android:background="#a63f51b5" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="sign up"
         android:id="@+id/buttonhirerli"
         android:layout_below="@+id/loginhsubmit"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp" />
+        android:layout_marginTop="73dp"
+        android:background="#a63f51b5" />
 </RelativeLayout>

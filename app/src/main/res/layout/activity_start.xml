@@ -10,20 +10,26 @@
     tools:context="com.example.findx.findx.StartActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:text="Hire a worker"
         android:id="@+id/button1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="125dp" />
+        android:layout_marginTop="75dp"
+        android:background="#a63f51b5"
+        android:enabled="true"
+        android:textSize="20dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:text="Find Work"
         android:id="@+id/button2"
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="96dp" />
+        android:layout_marginTop="15dp"
+        android:background="#a63f51b5"
+        android:enabled="true"
+        android:textSize="20dp" />
 </RelativeLayout>

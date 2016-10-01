@@ -17,7 +17,7 @@
         </activity>
         <activity
             android:name=".loginhirer"
-            android:label="@string/title_activity_loginhirer"
+            android:label="Log In"
             android:parentActivityName=".StartActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name=".loginworker"
-            android:label="@string/title_activity_loginworker"
+            android:label="Log In"
             android:parentActivityName=".StartActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -35,7 +35,7 @@
         </activity>
         <activity
             android:name=".signupworker"
-            android:label="@string/title_activity_signup"
+            android:label="Sign Up"
             android:parentActivityName=".StartActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -44,7 +44,7 @@
         </activity>
         <activity
             android:name=".signuphirer"
-            android:label="@string/title_activity_signuphirer"
+            android:label="Sign Up"
             android:parentActivityName=".StartActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -62,7 +62,7 @@
         </activity>
         <activity
             android:name=".profilehirer"
-            android:label="@string/title_activity_profilehirer"
+            android:label="My Profile"
             android:parentActivityName=".loginhirer"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

@@ -86,7 +86,7 @@ public class signupworker extends AppCompatActivity {
 
         myDbHelper.insert_record_workers(name, user, pass, city, phone, wfrom, wto, job);
 
-        Toast.makeText(this,"Data Inserted", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"User Added", Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(this,loginworker.class) ;
         startActivity(intent);

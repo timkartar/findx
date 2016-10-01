@@ -45,7 +45,7 @@ public class loginworker extends AppCompatActivity {
             throw e;
         }
 
-        myDbHelper.onUpgrade(myDbHelper.myDatabase,1,2);
+        // myDbHelper.onUpgrade(myDbHelper.myDatabase,1,2);
 
         Button button1 = (Button) findViewById(R.id.buttonworkersu);
         button1.setOnClickListener(new View.OnClickListener() {
