@@ -73,7 +73,7 @@ public class signuphirer extends AppCompatActivity {
 
         final DatabaseHelper myDbHelper = new DatabaseHelper(signuphirer.this);
 
-        myDbHelper.insert_record_hirers(name, user, pass, phone, city);
+        myDbHelper.insert_record_hirers(name, user, pass, city, phone);
 
         Toast.makeText(this, "Data Inserted", Toast.LENGTH_LONG).show();
 

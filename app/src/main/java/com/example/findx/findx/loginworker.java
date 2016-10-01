@@ -45,7 +45,7 @@ public class loginworker extends AppCompatActivity {
             throw e;
         }
 
-        // myDbHelper.onUpgrade(myDbHelper.myDatabase,1,2);
+        myDbHelper.onUpgrade(myDbHelper.myDatabase,1,2);
 
         Button button1 = (Button) findViewById(R.id.buttonworkersu);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +78,7 @@ public class loginworker extends AppCompatActivity {
         String pass = (String) passE.getText().toString();
 
         final DatabaseHelper myDbHelper = new DatabaseHelper(loginworker.this);
-        final Cursor cursor = myDbHelper.login_check_worker(user, pass);
+        final Cursor cursor = myDbHelper.login_check_worker(user, pass, null);
 
         boolean isEmpty = cursor.getCount() < 1;
 

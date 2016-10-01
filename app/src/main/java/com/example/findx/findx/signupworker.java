@@ -84,7 +84,7 @@ public class signupworker extends AppCompatActivity {
 
         final DatabaseHelper myDbHelper = new DatabaseHelper(signupworker.this);
 
-        myDbHelper.insert_record_workers(name, user, pass, phone, city, wfrom, wto, job);
+        myDbHelper.insert_record_workers(name, user, pass, city, phone, wfrom, wto, job);
 
         Toast.makeText(this,"Data Inserted", Toast.LENGTH_LONG).show();
 

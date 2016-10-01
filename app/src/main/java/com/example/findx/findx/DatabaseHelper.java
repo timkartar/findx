@@ -126,11 +126,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     public Cursor query(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
-        return myDatabase.query(table, null, null, null, null, null, null);}
+        return myDatabase.query(table, columns, selection, selectionArgs, groupBy, having, orderBy);}
 
     public void insert_record_workers(String name, String user, String pass, String city, String phone, String wfrom, String wto, String job){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
         String query = "INSERT into 'workers' (Name, Username, Password, City, Phone, Wfrom, Wto, Job) VALUES('";
         query += name;
         query += "', '";
@@ -153,7 +152,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     public void insert_record_hirers(String name, String user, String pass, String city, String phone){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
         String query = "INSERT into 'hirers' (Name, Username, Password, City, Phone) VALUES('";
         query += name;
         query += "', '";
@@ -168,11 +166,31 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.execSQL(query);
     }
 
-    public Cursor login_check_worker(String user, String pass){
+    public void insert_record_job(String Hid, String Wid, String date) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] args = {user, pass};
-        Cursor c = db.query("workers", null, "Username=? AND Password=?", args, null, null, null);
-        c.moveToLast();
+        String query = "INSERT into 'jobs' (Hid, Wid, Date, Status) VALUES('";
+        query += Hid;
+        query += "', '";
+        query += Wid;
+        query += "', '";
+        query += date;
+        query += "', '";
+        query += "0";
+        query += "')";
+        db.execSQL(query);
+    }
+
+    public Cursor login_check_worker(String user, String pass, String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c;
+        if (id == null) {
+            String[] args = {user, pass};
+            c = db.query("workers", null, "Username=? AND Password=?", args, null, null, null);
+            c.moveToLast();
+        } else {
+            String[] args = {id};
+            c = db.query("workers", null, "Id=?", args , null, null, null);
+        }
         return c;
     }
 
@@ -187,6 +205,24 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             String[] args = {id};
             c = db.query("hirers", null, "Id=?", args , null, null, null);
         }
+        return c;
+    }
+
+    public Cursor worker_find(String city, String job) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c;
+        String[] args = {city, job};
+        c = db.query("workers", null, "City=? AND Job=?", args, null, null, null);
+        c.moveToFirst();
+        return c;
+    }
+
+    public Cursor job_find(String Hid) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c;
+        String[] args = {Hid};
+        c = db.query("jobs", null, "Hid=?", args, null, null, null);
+        c.moveToFirst();
         return c;
     }
 }
