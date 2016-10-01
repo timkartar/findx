@@ -51,6 +51,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.findx.findx.StartActivity" />
         </activity>
+        <activity
+            android:name=".profileworker"
+            android:label="@string/title_activity_profileworker"
+            android:parentActivityName=".loginworker"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.findx.findx.loginworker" />
+        </activity>
+        <activity
+            android:name=".profilehirer"
+            android:label="@string/title_activity_profilehirer"
+            android:parentActivityName=".loginhirer"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.findx.findx.loginhirer" />
+        </activity>
     </application>
 
 </manifest>

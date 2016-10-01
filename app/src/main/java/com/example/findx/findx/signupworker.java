@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.findx.findx.DatabaseHelper;
@@ -41,13 +42,14 @@ public class signupworker extends AppCompatActivity {
         try {
             myDbHelper.createDataBase();
         } catch (IOException ice) {
-            throw new Error("Unable to create datbase");
+            throw new Error("Unable to create database");
         }
         try {
             myDbHelper.openDatabase();
         } catch (SQLiteException e) {
             throw e;
         }
+
 
         Button signup = (Button) findViewById(R.id.submitsignupworker);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +71,7 @@ public class signupworker extends AppCompatActivity {
         final EditText cityE = (EditText) findViewById(R.id.location);
         final EditText wfromE = (EditText) findViewById(R.id.tstart);
         final EditText wtoE = (EditText) findViewById(R.id.tend);
+        final Spinner jobE = (Spinner) findViewById(R.id.job);
 
         String name = (String) nameE.getText().toString();
         String user = (String) userE.getText().toString();
@@ -77,10 +80,11 @@ public class signupworker extends AppCompatActivity {
         String city = (String) cityE.getText().toString();
         String wfrom = (String) wfromE.getText().toString();
         String wto = (String) wtoE.getText().toString();
+        String job = (String) String.valueOf(jobE.getSelectedItem());
 
         final DatabaseHelper myDbHelper = new DatabaseHelper(signupworker.this);
 
-        myDbHelper.insert_record_workers(name, user, pass, phone, city, wfrom, wto);
+        myDbHelper.insert_record_workers(name, user, pass, phone, city, wfrom, wto, job);
 
         Toast.makeText(this,"Data Inserted", Toast.LENGTH_LONG).show();
 

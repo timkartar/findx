@@ -6,4 +6,17 @@
     <string name="title_activity_loginworker">loginworker</string>
     <string name="title_activity_signup">signup</string>
     <string name="title_activity_signuphirer">signuphirer</string>
+    <string name="job_prompt">Pick Occupation</string>
+
+    <string-array name="job">
+        <item>Plumber</item>
+        <item>Electrician</item>
+        <item>Mason</item>
+        <item>Maid</item>
+        <item>Cook</item>
+    </string-array>
+    <string name="title_activity_profileworker">My Profile</string>
+    <string name="title_activity_profilehirer">My Profile</string>
+
+
 </resources>

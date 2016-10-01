@@ -81,8 +81,17 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/submitsignupworker"
-        android:layout_below="@+id/tend"
+        android:layout_below="@+id/job"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp" />
+        android:layout_marginTop="28dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/job"
+        android:entries="@array/job"
+        android:prompt="@string/job_prompt"
+        android:layout_below="@+id/tend"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

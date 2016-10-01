@@ -12,59 +12,40 @@
     tools:context="com.example.findx.findx.loginworker"
     tools:showIn="@layout/activity_loginworker">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/namelw"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="username"
-        android:id="@+id/textView3"
+        android:hint="Userame"
+        android:inputType="text"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="91dp" />
+        android:layout_marginTop="34dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/passlw"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="password"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="73dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:hint="Password"
         android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4" />
+        android:layout_below="@+id/namelw"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="submit"
-        android:id="@+id/button4"
-        android:layout_below="@+id/editText4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp" />
+        android:id="@+id/buttonworkerli"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/buttonworkersu" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="sign up"
-        android:id="@+id/buttonworker"
-        android:layout_below="@+id/button4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:id="@+id/buttonworkersu"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/buttonworkerli"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
