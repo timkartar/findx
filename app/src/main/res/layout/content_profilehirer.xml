@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,4 +16,69 @@
     tools:context="com.example.findx.findx.profilehirer"
     tools:showIn="@layout/activity_profilehirer">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:layout_marginTop="50dp"
+        android:id="@+id/hirername"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/listView"
+        android:layout_marginTop="91dp"
+        android:layout_below="@+id/hirername"
+        android:layout_alignParentStart="true" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jobquery"
+        android:entries="@array/job"
+        android:prompt="@string/job_prompt"
+        android:layout_below="@+id/listView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="79dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Jobs"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/hirername"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Who do you want?"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/jobquery"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentStart="true" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"
+        android:layout_below="@+id/jobquery"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ask for Job"
+        android:id="@+id/askforjob"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/datePicker"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
+</ScrollView>

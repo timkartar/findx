@@ -1,11 +1,14 @@
 package com.example.findx.findx;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class profilehirer extends AppCompatActivity {
 
@@ -25,6 +28,11 @@ public class profilehirer extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Intent intent = getIntent();
+        String temp = intent.getStringExtra("int_value");
+        TextView text = (TextView)findViewById(R.id.hirername);
+
+        text.setText(temp);
     }
 
 }

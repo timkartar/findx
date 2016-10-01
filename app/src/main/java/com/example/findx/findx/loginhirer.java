@@ -69,7 +69,8 @@ public class loginhirer extends AppCompatActivity {
         if (isEmpty) {
             Toast.makeText(loginhirer.this, "Username/Password Incorrect", Toast.LENGTH_SHORT).show();
         } else {
-            Intent intent = new Intent(this, profilehirer.class);
+            Intent intent = new Intent(loginhirer.this, profilehirer.class);
+            intent.putExtra("int_value",cursor.getString(1));
             startActivity(intent);
 
         }
