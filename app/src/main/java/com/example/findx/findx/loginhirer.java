@@ -62,7 +62,7 @@ public class loginhirer extends AppCompatActivity {
         String pass = (String) passE.getText().toString();
 
         final DatabaseHelper myDbHelper = new DatabaseHelper(loginhirer.this);
-        final Cursor cursor = myDbHelper.login_check_hirer(user, pass);
+        final Cursor cursor = myDbHelper.login_check_hirer(user, pass, null);
 
         boolean isEmpty = cursor.getCount() < 1;
 

@@ -1,6 +1,8 @@
 package com.example.findx.findx;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.IOException;
 
 public class profilehirer extends AppCompatActivity {
 
@@ -27,12 +31,30 @@ public class profilehirer extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         String temp = intent.getStringExtra("int_value");
         TextView text = (TextView)findViewById(R.id.hirername);
 
-        text.setText(temp);
+        final DatabaseHelper myDbHelper = new DatabaseHelper(profilehirer.this);
+        try {
+            myDbHelper.createDataBase();
+        } catch (IOException ice) {
+            throw new Error("Unable to create datbase");
+        }
+        try {
+            myDbHelper.openDatabase();
+        } catch (SQLiteException e) {
+            throw e;
+        }
+
+        Cursor cursor = myDbHelper.login_check_hirer("a", "b", temp);
+        cursor.moveToFirst();
+        String name = cursor.getString(0);
+
+        text.setText(name);
+
     }
 
 }

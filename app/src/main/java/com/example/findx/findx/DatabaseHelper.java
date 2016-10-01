@@ -176,11 +176,17 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return c;
     }
 
-    public Cursor login_check_hirer(String user, String pass){
+    public Cursor login_check_hirer(String user, String pass, String id){
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] args = {user, pass};
-        Cursor c = db.query("hirers", null, "Username=? AND Password=?", args, null, null, null);
-        c.moveToLast();
+        Cursor c;
+        if (id == null) {
+            String[] args = {user, pass};
+            c = db.query("hirers", null, "Username=? AND Password=?", args, null, null, null);
+            c.moveToLast();
+        } else {
+            String[] args = {id};
+            c = db.query("hirers", null, "Id=?", args , null, null, null);
+        }
         return c;
     }
 }

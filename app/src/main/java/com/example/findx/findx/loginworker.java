@@ -45,6 +45,7 @@ public class loginworker extends AppCompatActivity {
             throw e;
         }
 
+        // myDbHelper.onUpgrade(myDbHelper.myDatabase,1,2);
 
         Button button1 = (Button) findViewById(R.id.buttonworkersu);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +85,8 @@ public class loginworker extends AppCompatActivity {
         if (isEmpty) {
             Toast.makeText(loginworker.this, "Username/Password Incorrect", Toast.LENGTH_SHORT).show();
         } else {
-            Intent intent = new Intent(this,profileworker.class) ;
+            Intent intent = new Intent(loginworker.this, profileworker.class);
+            intent.putExtra("int_value",cursor.getString(1));
             startActivity(intent);
         }
     }

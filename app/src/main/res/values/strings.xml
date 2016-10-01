@@ -14,6 +14,7 @@
         <item>Mason</item>
         <item>Maid</item>
         <item>Cook</item>
+        <item>Painter</item>
     </string-array>
     <string name="title_activity_profileworker">My Profile</string>
     <string name="title_activity_profilehirer">My Profile</string>
