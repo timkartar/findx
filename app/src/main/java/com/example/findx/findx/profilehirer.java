@@ -64,6 +64,7 @@ public class profilehirer extends AppCompatActivity {
         final String city = cursor.getString(4);
 
         text.setText(name);
+
         // Update new jobs
         Button buttons[]= new Button[5];
         buttons[0]= (Button)findViewById(R.id.button01);
@@ -73,7 +74,7 @@ public class profilehirer extends AppCompatActivity {
         buttons[4]= (Button)findViewById(R.id.button05);
 
         Cursor jobs;
-        jobs=myDbHelper.job_find(curr_id);
+        jobs=myDbHelper.job_find_H(curr_id);
         jobs.moveToLast();
         int i=0;
         String worker_id;

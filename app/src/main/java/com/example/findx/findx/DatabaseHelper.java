@@ -221,11 +221,20 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return c;
     }
 
-    public Cursor job_find(String Hid) {
+    public Cursor job_find_H(String Hid) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor c;
         String[] args = {Hid};
         c = db.query("jobs", null, "Hid=?", args, null, null, null);
+        c.moveToFirst();
+        return c;
+    }
+
+    public Cursor job_find_W(String Wid) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c;
+        String[] args = {Wid};
+        c = db.query("jobs", null, "Wid=?", args, null, null, null);
         c.moveToFirst();
         return c;
     }

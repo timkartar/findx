@@ -15,6 +15,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.findx.findx.profileworker"
     tools:showIn="@layout/activity_profileworker">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,38 +26,54 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:paddingBottom="10dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Your current job"
+        android:text="Most Recent Jobs"
         android:id="@+id/currentjob"
-        android:layout_below="@+id/workername"
-        android:layout_alignParentStart="true" />
-    <EditText
-        android:id="@+id/from"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="change availability time : from"
-        android:inputType="text"
-        android:layout_below="@id/currentjob"
-        android:layout_marginTop="34dp" />
+        android:layout_below="@id/workername"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
 
-    <EditText
-        android:id="@+id/to"
+    <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="change availability time : to"
-        android:inputType="textPassword"
-        android:layout_below="@+id/from"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/button001"
+        android:layout_below="@+id/currentjob"
+        android:padding="5dp"
+        android:background="#ffffff"  />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="submit"
-        android:id="@+id/askforjob"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/to"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/button002"
+        android:layout_below="@id/button001"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button003"
+        android:layout_below="@id/button002"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button004"
+        android:layout_below="@id/button003"
+        android:padding="5dp"
+        android:background="#ffffff" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button005"
+        android:layout_below="@id/button004"
+        android:padding="5dp"
+        android:background="#ffffff" />
+
+
 </RelativeLayout>
 </ScrollView>
