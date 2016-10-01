@@ -15,6 +15,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".loginhirer"
+            android:label="@string/title_activity_loginhirer"
+            android:parentActivityName=".StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.findx.findx.StartActivity" />
+        </activity>
+        <activity
+            android:name=".loginworker"
+            android:label="@string/title_activity_loginworker"
+            android:parentActivityName=".StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.findx.findx.StartActivity" />
+        </activity>
+        <activity
+            android:name=".signupworker"
+            android:label="@string/title_activity_signup"
+            android:parentActivityName=".StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.findx.findx.StartActivity" />
+        </activity>
+        <activity
+            android:name=".signuphirer"
+            android:label="@string/title_activity_signuphirer"
+            android:parentActivityName=".StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.findx.findx.StartActivity" />
+        </activity>
     </application>
 
 </manifest>
