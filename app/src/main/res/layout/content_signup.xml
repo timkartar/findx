@@ -54,7 +54,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="City/Town"
-        android:inputType="text|textPostalAddress"
+        android:inputType="textCapWords"
         android:layout_below="@+id/number"
         android:layout_alignParentEnd="true" />
 

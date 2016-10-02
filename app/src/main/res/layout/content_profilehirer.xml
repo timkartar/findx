@@ -94,9 +94,9 @@
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Ask for Job"
+        android:text="Hire"
         android:id="@+id/askforjob"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/datePicker"
@@ -108,7 +108,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/datePicker"
         android:layout_below="@+id/jobquery"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>
 </ScrollView>
