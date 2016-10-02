@@ -183,12 +183,17 @@ public class profilehirer extends AppCompatActivity {
         final DatabaseHelper myDbHelper = new DatabaseHelper(profilehirer.this);
         Cursor workers = myDbHelper.worker_find(city, job);
         int count = workers.getCount();
+        boolean isEmpty = workers.getCount() < 1;
+        if(isEmpty) {
+            Toast.makeText(profilehirer.this, "No Match Found", Toast.LENGTH_LONG).show();
+
+        }else{
         int a = new Random().nextInt(count);
         workers.moveToPosition(a);
         myDbHelper.insert_record_job(curr_id, workers.getString(1),date, workers.getString(0), workers.getString(8));
         Intent intent = new Intent(profilehirer.this, profilehirer.class);
         intent.putExtra("int_value", curr_id);
-        startActivity(intent);
+        startActivity(intent);}
     }
 
     public void jobcomplete(View view, String jobid, String curr_id) {
